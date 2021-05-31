@@ -105,6 +105,7 @@ Password.addEventListener("input", (event)=>{
     let pwd_value = Password.value
     let error_encounter = Password_Verification(pwd_value)
     if (error_encounter.length != 0){
+        // console.log(error_encounter)
         Disclaimer_Error[2].innerHTML = ""
         Password.style.borderColor = "red";
         error_encounter.forEach(elem =>{
@@ -116,6 +117,7 @@ Password.addEventListener("input", (event)=>{
 })
 
 function Password_Verification (user){
+    Disclaimer_Error[2].innerHTML = ""
     const input_err = []
     let Lower = 0
     let Upper = 0
@@ -155,6 +157,7 @@ function Password_Verification (user){
             input_err.push("Not enough number")
         }
     }
+    console.log(input_err, Lower, Upper, Nb)
     return input_err
 }
 
@@ -171,5 +174,10 @@ Password_Verif.addEventListener("input", (event)=>{
     }
 })
 
-    // Submit_btn[0].removeAttribute('disabled')
+document.addEventListener('keydown', ()=>{
+    if (Email.style.borderColor == "green" && Username.style.borderColor == "green" && Password.style.borderColor == "green" && Password_Verif.style.borderColor == "green"){
+        Submit_btn[0].removeAttribute('disabled')
+    }
+})
+
 
