@@ -37,7 +37,7 @@ body{
 .Email_Style, .Username_Style, .Password_Style, .Password_Verif_Style{
     position: relative;
     margin-left: 10px;
-    font-size: 25px;
+    font-size: 20px;
     color: #FFFFFF;
     cursor: pointer;
 }
@@ -55,7 +55,7 @@ body{
 
 #Register_Btn{
     /* background-color: black; */
-    margin-top: 50px;
+    margin-top: 90px;
     text-align: center;
 }
 .submit{
@@ -66,4 +66,10 @@ body{
     border: 5px solid #4D4D4D;
     color: #FFCB77;
     font-size: 25px;
+}
+
+#disclaimer{
+    color: #fff;
+    margin-left: 10px;
+    margin-top: 50px;
 }

@@ -1,0 +1,76 @@
+*{
+    background: #4D4D4D;
+}
+
+.loginPic{
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 1440px;
+    height: 1024px;
+    position: absolute;
+    background-image: url(../image/login_picture.jpg)
+}
+
+.Pseudo{
+    position: absolute;
+    top: 300px;
+    left: 900px;
+    width: 300px;
+    height: 50px;
+    font-family: Roboto;
+    background: #FFCB77;
+    border: 6px solid #FFFFFF;
+    box-sizing: border-box;
+    border-radius: 20px;
+    
+}
+.h2{
+    position: absolute;
+    bottom: 10px;
+    background: none;
+    
+    font-family: Roboto;
+    color: #FFFFFF;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 36px;
+    line-height: 42px;
+    text-align: center;
+}
+.h1{
+    top: -29px;
+    left: 100px;
+    position: absolute;
+    background: none;
+    font-family: Roboto;
+    color: #FFFFFF;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 36px;
+    line-height: 42px;
+
+}
+.Password{
+    position: absolute;
+    top: 500px;
+    left: 900px;
+    width: 300px;
+    height: 50px;
+    font-family: Roboto;
+    background: #FFCB77;
+    border: 6px solid #FFFFFF;
+    box-sizing: border-box;
+    border-radius: 20px;
+}
+.submit{
+    position: absolute;
+    left: 900px;
+    top:700px;
+    width: 300px;
+    height: 50px;
+    background: #373737;
+    border: 6px solid #4D4D4D;
+    box-sizing: border-box;
+    border-radius: 20px;
+}
