@@ -14,42 +14,64 @@ body
 
 .header
 {
-    display: flex;
-    border: 5px;
     border-color: aliceblue;
-    height: 100px;
-    width: 100px;
+    border-style: solid;
+    border: 2px;
 }
 
 #titre_popular_themes
 {
-    margin-top: 5%;
+    margin-top: 8%;
 }
 
 #titre_popular_posts
 {
-    margin-top: 10%;
+    margin-top: 2%;
 }
 
 #titre_all_themes
 {
-    margin-top: 15%;
+    margin-top: 2%;
 }
 
 #menu_popular_themes
 {
-    color:#212020;
-    border: 5px;
-    border-color: aliceblue;
-    height: 10%;
+    background-color: #212020;
+    border-color: #212020;
+    border-style: solid;
+    height: 125px;
+    width: 1900px;
 }
 
 #menu_popular_posts
 {
-
+    background-color: #212020;
+    border-color: #212020;
+    border-style: solid;
+    height: 125px;
+    width: 1900px;
+    display: flex;
 }
 
 #menu_all_themes
 {
-
+    background-color: #212020;
+    border-color: #212020;
+    border-style: solid;
+    height: 125px;
+    width: 1900px;
+    display: flex;
 }
+
+.carre
+{
+    margin: 10px;
+    background-color: white;
+    border-color: white;
+    border-style: solid;
+    height: 100px;
+    width: 100px;
+}
+
+
+
