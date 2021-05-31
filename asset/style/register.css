@@ -26,12 +26,19 @@ body{
     /* background-color: aqua; */
     position: absolute;
     left: 425px;
-    top: 50px;
+    top: 30px;
 }
 
-#Email, #Username, #Password, #Password_Verif{
+#Username, #Password, #Password_Verif{
     /* background-color: black; */
-    margin-top: 50px;
+    margin-top: 30px;
+}
+
+.Disclaimer_error{
+    margin-top: 8px;
+    font-size: 12px;
+    color:red;
+    margin-left: 10px;
 }
 
 .Email_Style, .Username_Style, .Password_Style, .Password_Verif_Style{
@@ -55,7 +62,7 @@ body{
 
 #Register_Btn{
     /* background-color: black; */
-    margin-top: 90px;
+    margin-top: 60px;
     text-align: center;
 }
 .submit{
