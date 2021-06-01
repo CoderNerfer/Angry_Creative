@@ -74,6 +74,7 @@ button:disabled{
     opacity: 0.5;
 }
 
+
 @media screen and (max-width: 1200px){
     body{
         background: #4d4d4d;
