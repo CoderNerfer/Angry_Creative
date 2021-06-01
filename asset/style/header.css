@@ -41,6 +41,9 @@
     top: 5px;
     border-radius: 20px;
 }
+#search-box button{
+    display: none;
+}
 .search_loop{
     position: relative;
     top: 50%;
@@ -58,6 +61,7 @@
     width: 500px;
     cursor: text;
 }
+
 
 .Login{
     position: absolute;
