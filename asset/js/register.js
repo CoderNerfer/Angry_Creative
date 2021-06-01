@@ -21,6 +21,7 @@ Email.addEventListener("input", (event)=>{
         Email.style.borderColor = "green";
         Disclaimer_Error[0].innerHTML = ""
     }
+    verif()
 })
 
 function Email_Verification (email){
@@ -78,6 +79,7 @@ Username.addEventListener("input", (event)=>{
         Username.style.borderColor = "green";
         Disclaimer_Error[1].innerHTML = ""
     }
+    verif()
 })
 
 function Username_Verification (user){
@@ -103,6 +105,7 @@ function Username_Verification (user){
 
 Password.addEventListener("input", (event)=>{
     let pwd_value = Password.value
+    let pwd_verif_value = Password_Verif.value
     let error_encounter = Password_Verification(pwd_value)
     if (error_encounter.length != 0){
         // console.log(error_encounter)
@@ -114,6 +117,11 @@ Password.addEventListener("input", (event)=>{
     }else{
         Password.style.borderColor = "green";
     }
+    if(pwd_verif_value == pwd_value ){
+        Password_Verif.style.borderColor = "green";
+        Disclaimer_Error[3].innerHTML = ""
+    }
+    verif()
 })
 
 function Password_Verification (user){
@@ -172,12 +180,13 @@ Password_Verif.addEventListener("input", (event)=>{
         Password_Verif.style.borderColor = "green";
         Disclaimer_Error[3].innerHTML = ""
     }
+    verif()
 })
 
-document.addEventListener('keydown', ()=>{
-    if (Email.style.borderColor == "green" && Username.style.borderColor == "green" && Password.style.borderColor == "green" && Password_Verif.style.borderColor == "green"){
+function verif (){
+    if (Email.style.borderColor == "green" && Username.style.borderColor == "green" && Password.style.borderColor == "green"  && Password_Verif.style.borderColor == "green"){
         Submit_btn[0].removeAttribute('disabled')
     }
-})
+}
 
 

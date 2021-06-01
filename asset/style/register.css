@@ -7,34 +7,26 @@
 }
 body{
     background-color: #4D4D4D;
-}
-
-#RegisterImg{
-    width: 900px;
-    height: 800px;
-    background:  center/150% no-repeat url("../image/pizz_register.jpg");
-    /* background-color: aqua; */
-    position: absolute;
-    left: 50%;
-    top: 53%;
-    transform: translate(-50%, -50%);
+    background-image: url("../image/pizza.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 #RegisterArea{
     width: 450px;
     height: 700px;
-    /* background-color: aqua; */
     position: absolute;
-    left: 425px;
-    top: 30px;
+    left: 70%;
+    top: 60%;
+    transform: translate(-50%, -50%);
 }
 
 #Username, #Password, #Password_Verif{
-    /* background-color: black; */
     margin-top: 30px;
 }
 
 .Disclaimer_error{
+    height: 50px;
     margin-top: 8px;
     font-size: 12px;
     color:red;
@@ -61,8 +53,7 @@ body{
 }
 
 #Register_Btn{
-    /* background-color: black; */
-    margin-top: 60px;
+    margin-top: 10px;
     text-align: center;
 }
 .submit{
