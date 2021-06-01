@@ -9,20 +9,18 @@ html{
     min-width: 300px;
 }
 body{
-    background-color: #4D4D4D;
-    background-image: url("../image/pizza.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
+    background: #4D4D4D url("../image/pizza.jpg") no-repeat top/100%;
 }
 
 
 #RegisterArea{
     width: 450px;
-    height: 700px;
+    height: 650px;
     position: absolute;
     left: 70%;
-    top: 60%;
+    top: 50%;
     transform: translate(-50%, -50%);
+    transition: 1s;
 }
 
 #Username, #Password, #Password_Verif{
@@ -77,5 +75,14 @@ button:disabled{
 }
 
 @media screen and (max-width: 1200px){
-
+    body{
+        background: #4d4d4d;
+    }
+    #RegisterArea{
+        left: 50%;
+        background: #373737;
+        padding: 20px;
+        border-radius: 35px;
+    }
+    
 }
