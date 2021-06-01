@@ -1,76 +1,64 @@
 *{
-    background: #4D4D4D;
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Roboto', sans-serif;
+    text-decoration: none;
+    outline: none;
 }
 
-.loginPic{
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    width: 1440px;
-    height: 1024px;
+
+#Loginpic{
+    width: 100%;
+    height: 100%;
+    background:  center/150% no-repeat url("../image/login_picture.jpg");
     position: absolute;
-    background-image: url(../image/login_picture.jpg)
 }
 
-.Pseudo{
+#LoginArea{
+    width: 450px;
+    height: 700px;
     position: absolute;
-    top: 300px;
     left: 900px;
-    width: 300px;
-    height: 50px;
-    font-family: Roboto;
-    background: #FFCB77;
-    border: 6px solid #FFFFFF;
-    box-sizing: border-box;
-    border-radius: 20px;
-    
+    top: 100px;
 }
-.h2{
-    position: absolute;
-    bottom: 10px;
-    background: none;
-    
-    font-family: Roboto;
+
+#Pseudo, #Password{
+    margin-top: 100px;
+}
+
+
+
+.Pseudo_Stylé, .Password_Stylé{
+    position: relative;
+    margin-left: 10px;
+    font-size: 20px;
     color: #FFFFFF;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 36px;
-    line-height: 42px;
+    cursor: pointer;
+}
+.Pseudo_insert, .Password_insert{
+    margin-top: 8px;
+    width: 400px;
+    height: 20px;
+    margin-left: 10px;
+    border-radius: 10px;
+    border: 3.5px solid #FFFFFF;
+    padding: 2px 10px;
+    background-color: #FFCB77;
+    color: #000000;
+}
+
+#Login_Btn{
+    /* background-color: black; */
+    margin-top: 60px;
     text-align: center;
 }
-.h1{
-    top: -29px;
-    left: 100px;
-    position: absolute;
-    background: none;
-    font-family: Roboto;
-    color: #FFFFFF;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 36px;
-    line-height: 42px;
-
-}
-.Password{
-    position: absolute;
-    top: 500px;
-    left: 900px;
-    width: 300px;
-    height: 50px;
-    font-family: Roboto;
-    background: #FFCB77;
-    border: 6px solid #FFFFFF;
-    box-sizing: border-box;
-    border-radius: 20px;
-}
 .submit{
-    position: absolute;
-    left: 900px;
-    top:700px;
-    width: 300px;
-    height: 50px;
-    background: #373737;
-    border: 6px solid #4D4D4D;
-    box-sizing: border-box;
+    cursor: pointer;
+    background: #FFCB77;
+    width: 200px;
+    height: 60px;
     border-radius: 20px;
+    border: 5px solid #4D4D4D;
+    color: #4D4D4D;
+    font-size: 25px;
 }
