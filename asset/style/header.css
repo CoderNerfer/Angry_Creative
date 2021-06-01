@@ -12,7 +12,7 @@
     left: 80px;
     display: flex;
     width: 250px;
-    transition:  1s ;
+    transition:  0.5s ;
 }
 
 #LOGO img{
