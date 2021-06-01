@@ -84,6 +84,7 @@ button:disabled{
         background: #373737;
         padding: 20px;
         border-radius: 35px;
+        top: 52%;
     }
     
 }
