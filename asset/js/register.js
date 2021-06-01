@@ -108,7 +108,6 @@ Password.addEventListener("input", (event)=>{
     let pwd_verif_value = Password_Verif.value
     let error_encounter = Password_Verification(pwd_value)
     if (error_encounter.length != 0){
-        // console.log(error_encounter)
         Disclaimer_Error[2].innerHTML = ""
         Password.style.borderColor = "red";
         error_encounter.forEach(elem =>{
@@ -165,7 +164,6 @@ function Password_Verification (user){
             input_err.push("Not enough number")
         }
     }
-    console.log(input_err, Lower, Upper, Nb)
     return input_err
 }
 

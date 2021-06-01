@@ -8,6 +8,10 @@ input.addEventListener("keyup", function(event) {
     // Cancel the default action, if needed
     event.preventDefault();
     // Trigger the button element with a click
-    document.getElementById("Search__BTN").click();
+    console.log("blab")
+    setTimeout(() => {
+      document.getElementById("Search__BTN").removeAttribute("disabled");
+      document.getElementById("Search__BTN").click();
+    }, 2000);
   }
 });
