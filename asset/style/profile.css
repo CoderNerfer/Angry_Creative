@@ -80,6 +80,7 @@ button{
 
 
 #Manage_Profile{
+    /* display: none; */
     position: absolute;
     margin-top: 100px;
     left: 50%;
@@ -118,7 +119,7 @@ button{
     transform: translateX(-50%);
     margin-top: 20px;
     width: 90%;
-    height: calc(90%);
+    height: 90%;
     /* background: black */
 }
 #user_mod, #mail_mod, #password_mod{
@@ -183,4 +184,106 @@ button{
     background: none;
     border: 5px solid #373737;
     border-radius: 15px;
+}
+
+@media screen and (max-width: 1200px){
+    #Manage_Profile{
+        padding: 0 0 20px 0;
+    }
+    #user_btn, #mail_btn{
+        font-size: 15px;
+    }
+    #mod_info_lab{
+        font-size: 15px;
+    }
+    #my_info{
+        font-size: 30px;
+    }
+    #password_btn{
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 800px){
+    #Manage_Profile{
+        padding: 0;
+        height: 700px;
+    }
+    #Username{
+        font-size: 60px;
+    }
+    #modify_setting{
+        margin-top: 20px;
+    }
+    #user_mod,  #mail_mod{
+        display: block;
+        /* background: #000; */
+        height: 140px;
+    }
+    #mail_mod{
+        margin-top: 20px;
+    }
+    #mod_info{
+        text-align: center;
+        /* background: chartreuse; */
+        height: 80px;
+    }
+    #mod_info{
+        width: 100%;
+    }
+    #my_info{
+        margin-top: 10px;
+    }
+    #user_btn, #mail_btn{
+        position: relative;
+        top: 0px;
+        left: 50%;
+        transform: translateX(-50%);
+        height: 30px;
+        width: 80px;
+        border-radius: 5px;
+        font-size: 10px;
+    }
+    #password_btn{
+        position: relative;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 200px;
+        height: 50px;
+        border-radius: 15px;
+    }
+    #Delete_account{
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+
+}
+@media screen and (max-width: 500px){
+    
+    #modify_setting{
+        margin-top: 10px;
+    }
+    #modify{
+        height: 80%;
+    }
+    #Username{
+        font-size: 40px;
+    }
+    #mod_info_lab{
+        font-size: 15px;
+    }
+    #password_btn{
+        width: 150px;
+        height: 50px;
+        border-radius: 15px;
+        font-size: 15px;
+    }
+    #my_info{
+        font-size: 20px;
+    }
+
 }
