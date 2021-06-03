@@ -20,7 +20,7 @@
 - " " non autorisé
 - Avoir une MAJ minimum
 - Avoir une MIN minimum
-- Avoir une NUB minimum
+- Avoir un NUB minimum
 
 # Password
 
