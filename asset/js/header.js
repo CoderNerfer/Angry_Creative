@@ -15,3 +15,38 @@ input.addEventListener("keyup", function(event) {
     }, 2000);
   }
 });
+
+
+let my_cookie_header = Select_Login_cookie()
+if (my_cookie_header != ""){
+    my_cookie_header = JSON.parse(Cookie_cooker(my_cookie_header))
+    if (my_cookie_header.user != ""){
+        document.getElementsByClassName("Login")[0].setAttribute("src", "https://img.icons8.com/fluent-systems-regular/45/000000/user-male-circle.png")
+    }
+}else{
+    document.getElementsByClassName("Login")[0].setAttribute("src", "https://img.icons8.com/windows/50/000000/user-ninja.png")
+}
+
+function Select_Login_cookie (){
+    let my_cookie_login = ""
+
+    document.cookie.split("; ").forEach((elem)=>{
+        // console.log(elem.slice(0, 5))
+        // console.log(elem)
+        if (elem.slice(0,5) == "Login"){
+            my_cookie_login = elem.slice(7,-1)
+        }
+    })
+    // console.log(my_cookie_login)
+    return my_cookie_login
+}
+
+function Cookie_cooker (initial_cookie){
+    const new_hot_cookie = initial_cookie.split("")
+    new_hot_cookie.forEach((element, index) => {
+        if (element == "'"){
+            new_hot_cookie[index] = '"'
+        }
+    });
+    return new_hot_cookie.join("")
+}
