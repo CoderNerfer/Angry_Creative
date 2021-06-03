@@ -197,6 +197,9 @@ button{
     font-size: 20px;
     font-weight: 700;
 }
+#DeleteInput{
+    display: none;
+}
 #Delete_account{
     position: absolute;
     bottom: 0;
@@ -254,8 +257,11 @@ button{
     border: 2px solid #FFCB77;
     background: none;
     border-radius: 10px;
-    height: 30px;
+    height: 50px;
     width: calc(100% - 50px);
+    color: #fff;
+    padding-left: 10px;
+    font-size: 20px;
 }
 #Btn{
     position: absolute;
@@ -266,9 +272,6 @@ button{
     height: 100px;
 }
 #modif button{
-    /* background: black; */
-    /* border: none; */
-    color: #FFF;
     width: 100px;
     height: 60px;
     font-size: 25px;
@@ -277,14 +280,18 @@ button{
     border-radius: 20px;
 }
 #Exit{
+    color: #FFF;
     background: none;
     right: 200px;
     border: 2px solid #fff;
 }
 #Save{
+    color: #4d4d4d;
+    font-weight: 700;
     border: 2px solid #FFCB77;
     background: #FFCB77;
     right: 50px;
+
 }
 
 @media screen and (max-width: 1200px){
