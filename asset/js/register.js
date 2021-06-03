@@ -27,6 +27,13 @@ Email.addEventListener("input", (event)=>{
 function Email_Verification (email){
     let double_mail = 0
     const input_err = []
+
+    if (email.length < 5){
+        if (input_err.includes("Too short") == false){
+            input_err.push("Too short")
+        }
+    }
+
     email.split("").forEach((element, index)=> {
         if (element == " "){
             if (input_err.includes("Space character not allowed") == false){
