@@ -9,6 +9,12 @@ body
     background-color: #4D4D4D;
 }
 
+#home
+{
+    position: relative;
+    top: 70px;
+}
+
 .titre_home
 {
     color: #FFCB77;
@@ -19,7 +25,7 @@ body
 
 #titre_popular_themes
 {
-    margin-top: 8%;
+    margin-top: 0;
 }
 
 #titre_popular_posts
@@ -39,10 +45,9 @@ body
     border-style: solid;
     height: 150px;
     width: 100%;
+    display: block;
     overflow: hidden;
     overflow-x: scroll;
-    white-space: nowrap;
-    display: block;
     box-sizing: border-box;
     padding-left: 20px;
     padding-right: 20px;
@@ -50,6 +55,19 @@ body
 .menu_theme::-webkit-scrollbar
 {
     display: none;
+}
+
+.carousel
+{
+    white-space: nowrap;
+    
+}
+
+.popular_posts
+{
+    height: 220px;
+    display: flex;
+    justify-content: space-between;
 }
 
 #top5
@@ -85,14 +103,14 @@ body
 .arrowLeftTheme
 {
     left: 0;
-    bottom: 8.9%;
+    bottom: 0;
     position: absolute;
 }
 
 .arrowRightTheme
 {
     right: 0;
-    bottom: 8.9%;
+    bottom: 0;
     position: absolute;
 }
 
@@ -115,14 +133,4 @@ body
     margin-left: 5%;
 }
 
-.post
-{
-    margin-right: 4.5%;
-    margin-left: 4.5%;
-    height: 400px;
-    width: 200px;
-    background-color: #212020;
-    border-color: #212020;
-    display: inline-block;
-}
 
