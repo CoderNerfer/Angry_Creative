@@ -46,18 +46,19 @@
                 <div id="Mail">
                     <label for="Insert_a_mail" class="mailAddress_Stylé">Mail Address</label>
                     <input type="text" name="Insert_a_mail" id="Insert_a_mail" class="mail_insert" placeholder="lafont.pedro@gmail.com">
+                    <p class="Print_error"></p>
                 </div>
 
                 <div id="Password">
                     <label for="Insert_a_password" class="Password_Stylé">Password</label>
-                    <input type="password" name="Insert_a_password" id="Insert_a_password" class="Password_insert" placeholder="********" >
+                    <input type="password" name="Insert_a_password" id="Insert_a_password" class="Password_insert" placeholder="***********" autocomplete="">
+                    <p class="Print_error"></p>
                 </div>
 
                 <div id="Login_Btn">
-                    <button type="submit" class="submit" >LOGIN</button>
+                    <button type="submit" class="submit" disabled>LOGIN</button>
                 </div>
-
-
+                
             </form>
         </div>
         <script src="../asset/js/login.js"></script>
