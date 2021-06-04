@@ -7,6 +7,7 @@
 - .@ interdit
 - @. interdit
 - avoir qqch apres @ et un .
+- character ascii seulement entre 32 et 126
 
 
 # Username
