@@ -16,15 +16,18 @@ input.addEventListener("keyup", function(event) {
   }
 });
 
-
+// document.cookie = "Login ='{'user':'Clem','mail':'mail@cookie.com','nb_posts':'10','nb_likes':'15'}'"
 let my_cookie_header = Select_Login_cookie()
 if (my_cookie_header != ""){
     my_cookie_header = JSON.parse(Cookie_cooker(my_cookie_header))
+    console.log(my_cookie_header)
     if (my_cookie_header.user != ""){
         document.getElementsByClassName("Login")[0].setAttribute("src", "https://img.icons8.com/fluent-systems-regular/45/000000/user-male-circle.png")
+        document.getElementById("Post_add").style.display = "block"
     }
 }else{
     document.getElementsByClassName("Login")[0].setAttribute("src", "https://img.icons8.com/windows/50/000000/user-ninja.png")
+    document.getElementById("Post_add").style.display = "none"
 }
 
 function Select_Login_cookie (){

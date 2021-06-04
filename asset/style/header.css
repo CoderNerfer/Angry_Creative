@@ -21,6 +21,7 @@
 }
 
 .Logo_Write{
+    cursor: default;
     position: relative;
     top: 50%;
     transform: translateY(-50%);
@@ -67,10 +68,35 @@
     transition:  0.5s;
 }
 
-
-.Login{
+#Addpost_Login{
     position: absolute;
     right: 80px;
+    display: flex;
+    /* background-color: blue; */
+    height: 50px;
+}
+#Post_add{
+    cursor: pointer;
+    display: none;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    background: white;
+    margin-right: 20px;
+    padding: 0px 15px;
+    width: 120px;
+    height: 35px;
+    border-radius: 20px;
+}
+#Post_add p{
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.Login{
+    cursor: pointer;
     transition:  0.5s;
 } 
 
