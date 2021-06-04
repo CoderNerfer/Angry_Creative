@@ -177,7 +177,7 @@ button{
     color: #FFCB77;
     font-size: 20px;
 }
-#my_info{
+.my_info{
     margin-top: 20px;
     font-size: 40px;
     color: #fff;
@@ -304,7 +304,7 @@ button{
     #mod_info_lab{
         font-size: 15px;
     }
-    #my_info{
+    .my_info{
         font-size: 30px;
     }
     #password_btn{
@@ -343,7 +343,7 @@ button{
     #mod_info{
         width: 100%;
     }
-    #my_info{
+    .my_info{
         margin-top: 10px;
     }
     #user_btn, #mail_btn{
@@ -402,7 +402,7 @@ button{
         border-radius: 15px;
         font-size: 15px;
     }
-    #my_info{
+    .my_info{
         font-size: 20px;
     }
 

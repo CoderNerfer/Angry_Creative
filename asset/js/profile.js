@@ -54,10 +54,14 @@ Modify_pwd.addEventListener("click", ()=>{
     first_label.innerHTML = "New Password"
     first_label.setAttribute("name", "new_password")
     Second_label.innerHTML = "Verification New Password"
+    document.getElementById("Input__info").setAttribute("type","password")
+    document.getElementById("Input__curt_pwd").setAttribute("type","password")
 })
 Exit.addEventListener("click", ()=>{
     Profile.style.display = "block"
-Profil_Mod.style.display = "none"
+    Profil_Mod.style.display = "none"
+    document.getElementById("Input__info").value = ""
+    document.getElementById("Input__curt_pwd").value = ""
 })
 
 let my_cookie = Select_Login_cookie()
@@ -68,6 +72,8 @@ if (my_cookie != ""){
     document.getElementById("Post_stat").innerHTML = `Post : <strong>${my_cookie.nb_posts}</strong>`
     document.getElementById("Liked_stat").innerHTML = `Liked Post : <strong>${my_cookie.nb_likes}</strong>`
 
+    document.getElementById('Personal_user').innerHTML = `${my_cookie.user}`
+    document.getElementById('Personal_email').innerHTML = `${my_cookie.mail}`
     document.getElementById("DeleteInput").setAttribute("name", `${my_cookie.mail}`)
 
 }

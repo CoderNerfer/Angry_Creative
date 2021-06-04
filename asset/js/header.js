@@ -23,7 +23,7 @@ if (my_cookie_header != ""){
     console.log(my_cookie_header)
     if (my_cookie_header.user != ""){
         document.getElementsByClassName("Login")[0].setAttribute("src", "https://img.icons8.com/fluent-systems-regular/45/000000/user-male-circle.png")
-        document.getElementById("Post_add").style.display = "block"
+        document.getElementById("Post_add").style.display = "flex"
     }
 }else{
     document.getElementsByClassName("Login")[0].setAttribute("src", "https://img.icons8.com/windows/50/000000/user-ninja.png")
@@ -45,6 +45,7 @@ function Select_Login_cookie (){
 }
 
 function Cookie_cooker (initial_cookie){
+    // initial_cookie.replace(/\'/, "\"")
     const new_hot_cookie = initial_cookie.split("")
     new_hot_cookie.forEach((element, index) => {
         if (element == "'"){
