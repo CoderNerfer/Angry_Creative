@@ -8,7 +8,7 @@ Mail.addEventListener("input", ()=>{
     let MailError = MailVerification(mailValue)
     if (mailValue == ""){
         Mail.style.borderColor = "red";
-        Print_err[0].innerHTML = "Empty Mail address."
+        Print_err[0].innerHTML = "Empty eMail."
     }else if(MailError.length != 0){
         Print_err[0].innerHTML = ""
         Mail.style.borderColor = "red";
@@ -26,61 +26,68 @@ function MailVerification(Mail){
     let MailAt = 0
     const input_err = []
     if(Mail.length<5){
-        if (input_err.includes("Invalid Mail.") == false){
-            input_err.push("Invalid Mail.")
+        if (input_err.includes("Invalid Email.") == false){
+            input_err.push("Invalid Email.")
         }
     }else{
     let Mail_verif =Mail.split("@").length
         if (Mail_verif == 2){
             let Domain_verif = Mail.split("@")[1].split(".")
             if (Domain_verif.length != 2){
-                if (input_err.includes("Invalid Mail.") == false){
-                    input_err.push("Invalid Mail.")
+                if (input_err.includes("Invalid Email.") == false){
+                    input_err.push("Invalid Email.")
                 }
             }else{
                 if (Domain_verif[1] == ""){
-                    if (input_err.includes("Invalid Mail.") == false){
-                        input_err.push("Invalid Mail.")
+                    if (input_err.includes("Invalid Email.") == false){
+                        input_err.push("Invalid Email.")
                     }
                 }
             }
         }else{
-            if (input_err.includes("Invalid Mail.") == false){
-                input_err.push("Invalid Mail.")
+            if (input_err.includes("Invalid Email.") == false){
+                input_err.push("Invalid Email.")
             }
         }
     Mail.split("").forEach((element, indexMail)=> {
         if (element == " "){
-            if (input_err.includes("Invalid Mail.") == false){
-                input_err.push("Invalid Mail.")
+            if (input_err.includes("Invalid Email.") == false){
+                input_err.push("Invalid Email.")
+            }
+        }
+        if(['à', 'ç', 'é', 'è','ê','ù'].includes(element)){
+            if (input_err.includes("Invalid Email.") == false){
+                input_err.push("Invalid Email.")
             }
         }
         if (element == "@"){
             MailAt ++
         }
         if (indexMail > 0){
+
              if (element == "." && Mail[indexMail -1] == "."){
-                if (input_err.includes("Invalid Mail.") == false){
-                    input_err.push("Invalid Mail.")
+                if (input_err.includes("Invalid Email.") == false){
+                    input_err.push("Invalid Email.")
                 }
             }else if(element == "@" && Mail[indexMail -1] == "."){
-                if (input_err.includes("Invalid Mail.") == false){
-                    input_err.push("Invalid Mail.")
+                if (input_err.includes("Invalid Email.") == false){
+                    input_err.push("Invalid Email.")
                 }
             }else if (element == "." && Mail[indexMail -1] == "@"){
-                if (input_err.includes("Invalid Mail.") == false){
-                    input_err.push("Invalid Mail.")
+                if (input_err.includes("Invalid Email.") == false){
+                    input_err.push("Invalid Email.")
+                    
                 }
             }
         }
     })
     if (MailAt > 1 ){
-        if (input_err.includes("Invalid Mail.") == false){
-            input_err.push("Invalid Mail.")
+        if (input_err.includes("Invalid Email.") == false){
+            input_err.push("Invalid Email.")
         }
     }else if (MailAt < 1 ){
-        if (input_err.includes("Invalid Mail.") == false){
-            input_err.push("Invalid Mail.")
+        if (input_err.includes("Invalid Email.") == false){
+            input_err.push("Invalid Email.")
         }
     }
 }
