@@ -11,8 +11,8 @@
     font-weight: bold;
     text-shadow: 3px 0 0 black, 0 3px 0 black, 0 -3px 0 black, -3px 0 0 black, 3px 3px 0 black, 3px -3px 0 black, -3px 3px 0 black, -3px -3px 0 black;
     user-select: none;
-    white-space:normal;
-    vertical-align: top;
+    /* white-space:normal;
+    vertical-align: top; */
 }
 
 .theme p
@@ -105,7 +105,7 @@
 .Vegan
 {
     background-image: url(../image/theme_Vegan.jpg);
-    background-size: 100%;
+    background-size: 150%;
 }
 
 .Latina_America
