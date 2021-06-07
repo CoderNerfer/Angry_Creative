@@ -133,6 +133,68 @@
     left: 50%;
     transform: translateX(-50%);
 }
+#pop_post_add{
+    /* display: none; */
+    display: block;
+    position:fixed;
+    top: 55px;
+    width: 100%;
+    height: calc(100% - 55px);
+    background: rgba(0, 0, 0, 0.9);
+}
+#post_add_info{
+    width: 85%;
+    height: 90%;
+    background: #4d4d4d;
+    display: block;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 40px;
+}
+#post_add_info form{
+    /* display: grid;
+    grid-template-rows: 2fr 2fr 6fr; */
+    height: 100%;
+}
+
+#name{
+    position: relative;
+    left: 40px;
+    top: 20px;
+    width: calc(100% - 80px);
+    height: 15%;
+    background: chartreuse;
+}
+#tag{
+    position: relative;
+    left: 40px;
+    width: calc(100% - 80px);
+    height: 15%;
+    background: chocolate;
+}
+#describ_content{
+    position: relative;
+    bottom: 20px;
+    left: 40px;
+    width: calc(100% - 80px);
+    height: 70%;
+    background: cornflowerblue;
+}
+#name label, #tag label, #describ_content label{
+    font-size: 25px;
+    color: #fff;
+}
+#name input, #tag_posy, #describ_content textarea{
+    margin-top: 20px;
+}
+#describ_content textarea{
+    resize: none;
+    width: 96%;
+    height:82%;
+    padding: 2%;
+}
 @media screen and (max-width: 1200px){
     #LOGO{
         left: 20px;

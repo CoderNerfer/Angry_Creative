@@ -4,6 +4,7 @@
     height: 200px;
     background: #000;
     color: #fff;
+    padding: 15px;
 }
 #header_info{
     justify-content: space-between;
@@ -23,12 +24,25 @@
 }
 #brief_content{
     /* background: brown; */
-    text-align: center;
+    text-align: left;
     padding: 5px;
     margin-top: 10px;
     height: 80px;
     font-size: 12px;
+
 }
+#brief_content p{
+    /* white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    height: 80px; */
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;  
+    overflow: hidden;
+}
+
+
 #footer_info{
     position: relative;
     height: 75px;
@@ -42,10 +56,12 @@
     justify-content: space-between;
     /* background: cadetblue; */
     width: 200px;
-    height: 75px;
+    /* height: 75px; */
+    /* ALIGN-ITEMS: FLEX-END; */
+    align-items: flex-end;
 }
 .tag{
-    margin: 3px 2px;
+    /* margin: 3px 2px; */
     text-align: center;
     width: 95px;
     height: 30px;
