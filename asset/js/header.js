@@ -31,18 +31,17 @@ document.addEventListener("click", ()=>{
     document.getElementById("Pop_up").style.display = "none"
 })
 document.cookie = "Login ='{'user':'Clem','mail':'mail@cookie.com','nb_posts':'10','nb_likes':'15'}'"
+document.cookie = "Connect = true"
+
+
 let my_cookie_header = Select_Login_cookie()
-if (my_cookie_header != ""){
-    my_cookie_header = JSON.parse(Cookie_cooker(my_cookie_header))
-    console.log(my_cookie_header)
-    if (my_cookie_header.user != ""){
-        document.getElementsByClassName("Login")[0].setAttribute("src", "https://img.icons8.com/fluent-systems-regular/45/000000/user-male-circle.png")
-        document.getElementById("Post_add").style.display = "flex"
-        document.getElementById("First_pop").innerHTML = "Profile"
-        document.getElementById("First_pop").setAttribute("href","/profile")
-        document.getElementById("Second_pop").innerHTML = "Logout"
-        document.getElementById("Second_pop").setAttribute("href","/")
-    }
+if (my_cookie_header == "true"){
+    document.getElementsByClassName("Login")[0].setAttribute("src", "https://img.icons8.com/fluent-systems-regular/45/000000/user-male-circle.png")
+    document.getElementById("Post_add").style.display = "flex"
+    document.getElementById("First_pop").innerHTML = "Profile"
+    document.getElementById("First_pop").setAttribute("href","/profile")
+    document.getElementById("Second_pop").innerHTML = "Logout"
+    document.getElementById("Second_pop").setAttribute("href","/")
 }else{
     document.getElementsByClassName("Login")[0].setAttribute("src", "https://img.icons8.com/windows/50/000000/user-ninja.png")
     document.getElementById("First_pop").innerHTML = "Register"
@@ -55,23 +54,9 @@ function Select_Login_cookie (){
     let my_cookie_login = ""
 
     document.cookie.split("; ").forEach((elem)=>{
-        // console.log(elem.slice(0, 5))
-        // console.log(elem)
-        if (elem.slice(0,5) == "Login"){
-            my_cookie_login = elem.slice(7,-1)
+        if (elem.slice(0,7) == "Connect"){
+            my_cookie_login = elem.slice(8,elem.length)
         }
     })
-    // console.log(my_cookie_login)
     return my_cookie_login
-}
-
-function Cookie_cooker (initial_cookie){
-    // initial_cookie.replace(/\'/, "\"")
-    const new_hot_cookie = initial_cookie.split("")
-    new_hot_cookie.forEach((element, index) => {
-        if (element == "'"){
-            new_hot_cookie[index] = '"'
-        }
-    });
-    return new_hot_cookie.join("")
 }

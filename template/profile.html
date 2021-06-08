@@ -58,7 +58,7 @@
         <div id="pop_post_add">
             <div id="post_add_info">
                 <button id="close_post">+</button>
-                <form action="/" method="post">
+                <form action="javascript:void(0);">
                     <div id="name">
                         <label for="post_name_add">Name :</label><br>    
                         <input type="text" name="post_name_add" id="post_name_add">
@@ -161,10 +161,12 @@
         <div id="Profil_Info">
             <div id="stat">
                 <p id="Post_stat">
-                    Post : <strong>0</strong>
+                    <!-- Post : <strong>0</strong> -->
+                    {{Info.nb_post}}
                 </p>
                 <p id="Liked_stat">
-                    Liked Post : <strong>0</strong>
+                    <!-- Liked Post : <strong>0</strong> -->
+                    {{Info.nb_post_liked}}
                 </p>
             </div>
             <button id="Edit_profil_btn">
@@ -172,7 +174,9 @@
             </button>
         </div>
         <div id="Post_Area">
-            <div id="Nom_post" class="poste_preview">
+
+            {{tout la boucle des posts}}
+            <!-- <div id="Nom_post" class="poste_preview">
                 <div id="header_info">
                     <p class="title">1234567891234567891234567</p>
                     <p class="author">123456789123</p>
@@ -211,187 +215,8 @@
                         </div>
                     </div>
                 </div>
-            </div>        
-            <div id="Nom_post" class="poste_preview">
-                <div id="header_info">
-                    <p class="title">1234567891234567891234567</p>
-                    <p class="author">123456789123</p>
-                </div>
-                <div id="brief_content">
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nihil, doloribus tenetur necessitatibus laborum in reprehenderit iusto harum! Asperiores non consequuntur, quibusdam odio dicta est incidunt ducimus velit impedit quam nostrum! -245 max--
-                    
-                </div>
-                <div id="footer_info">
-                    <div class="posttag">
-                        <div class="tag burger">
-                            <p>Burger</p>
-                        </div>
-                        <div class="tag burger">
-                            <p>Burger</p>
-                        </div>
-                        <div class="tag burger">
-                            <p>Burger</p>
-                        </div>
-                        <div class="tag burger">
-                            <p>Burger</p>
-                        </div>
-                    </div>
-                    <div class="stat_global">
-                        <div class="view">
-                            <span class="iconify" data-inline="false" data-icon="akar-icons:eye"></span>
-                            <p id="conteur_view">0</p>
-                        </div>
-                        <div class="like">
-                            <span class="iconify" data-inline="false" data-icon="mdi:hamburger-check"></span>
-                            <p id="conteur_like">0</p>
-                        </div>
-                    </div>
-                </div>
-            </div> 
-            <div id="Nom_post" class="poste_preview">
-                <div id="header_info">
-                    <p class="title">1234567891234567891234567</p>
-                    <p class="author">123456789123</p>
-                </div>
-                <div id="brief_content">
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nihil, doloribus tenetur necessitatibus laborum in reprehenderit iusto harum! Asperiores non consequuntur, quibusdam odio dicta est incidunt ducimus velit impedit quam nostrum! -245 max--
-                    
-                </div>
-                <div id="footer_info">
-                    <div class="posttag">
-                        <div class="tag burger">
-                            <p>Burger</p>
-                        </div>
-                        <div class="tag burger">
-                            <p>Burger</p>
-                        </div>
-                        <div class="tag burger">
-                            <p>Burger</p>
-                        </div>
-                        <div class="tag burger">
-                            <p>Burger</p>
-                        </div>
-                    </div>
-                    <div class="stat_global">
-                        <div class="view">
-                            <span class="iconify" data-inline="false" data-icon="akar-icons:eye"></span>
-                            <p id="conteur_view">0</p>
-                        </div>
-                        <div class="like">
-                            <span class="iconify" data-inline="false" data-icon="mdi:hamburger-check"></span>
-                            <p id="conteur_like">0</p>
-                        </div>
-                    </div>
-                </div>
-            </div> 
-            <div id="Nom_post" class="poste_preview">
-                <div id="header_info">
-                    <p class="title">1234567891234567891234567</p>
-                    <p class="author">123456789123</p>
-                </div>
-                <div id="brief_content">
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nihil, doloribus tenetur necessitatibus laborum in reprehenderit iusto harum! Asperiores non consequuntur, quibusdam odio dicta est incidunt ducimus velit impedit quam nostrum! -245 max--
-                    
-                </div>
-                <div id="footer_info">
-                    <div class="posttag">
-                        <div class="tag burger">
-                            <p>Burger</p>
-                        </div>
-                        <div class="tag burger">
-                            <p>Burger</p>
-                        </div>
-                        <div class="tag burger">
-                            <p>Burger</p>
-                        </div>
-                        <div class="tag burger">
-                            <p>Burger</p>
-                        </div>
-                    </div>
-                    <div class="stat_global">
-                        <div class="view">
-                            <span class="iconify" data-inline="false" data-icon="akar-icons:eye"></span>
-                            <p id="conteur_view">0</p>
-                        </div>
-                        <div class="like">
-                            <span class="iconify" data-inline="false" data-icon="mdi:hamburger-check"></span>
-                            <p id="conteur_like">0</p>
-                        </div>
-                    </div>
-                </div>
-            </div> 
-            <div id="Nom_post" class="poste_preview">
-                <div id="header_info">
-                    <p class="title">1234567891234567891234567</p>
-                    <p class="author">123456789123</p>
-                </div>
-                <div id="brief_content">
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nihil, doloribus tenetur necessitatibus laborum in reprehenderit iusto harum! Asperiores non consequuntur, quibusdam odio dicta est incidunt ducimus velit impedit quam nostrum! -245 max--
-                    
-                </div>
-                <div id="footer_info">
-                    <div class="posttag">
-                        <div class="tag burger">
-                            <p>Burger</p>
-                        </div>
-                        <div class="tag burger">
-                            <p>Burger</p>
-                        </div>
-                        <div class="tag burger">
-                            <p>Burger</p>
-                        </div>
-                        <div class="tag burger">
-                            <p>Burger</p>
-                        </div>
-                    </div>
-                    <div class="stat_global">
-                        <div class="view">
-                            <span class="iconify" data-inline="false" data-icon="akar-icons:eye"></span>
-                            <p id="conteur_view">0</p>
-                        </div>
-                        <div class="like">
-                            <span class="iconify" data-inline="false" data-icon="mdi:hamburger-check"></span>
-                            <p id="conteur_like">0</p>
-                        </div>
-                    </div>
-                </div>
-            </div> 
-            <div id="Nom_post" class="poste_preview">
-                <div id="header_info">
-                    <p class="title">1234567891234567891234567</p>
-                    <p class="author">123456789123</p>
-                </div>
-                <div id="brief_content">
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nihil, doloribus tenetur necessitatibus laborum in reprehenderit iusto harum! Asperiores non consequuntur, quibusdam odio dicta est incidunt ducimus velit impedit quam nostrum! -245 max--
-                    
-                </div>
-                <div id="footer_info">
-                    <div class="posttag">
-                        <div class="tag burger">
-                            <p>Burger</p>
-                        </div>
-                        <div class="tag burger">
-                            <p>Burger</p>
-                        </div>
-                        <div class="tag burger">
-                            <p>Burger</p>
-                        </div>
-                        <div class="tag burger">
-                            <p>Burger</p>
-                        </div>
-                    </div>
-                    <div class="stat_global">
-                        <div class="view">
-                            <span class="iconify" data-inline="false" data-icon="akar-icons:eye"></span>
-                            <p id="conteur_view">0</p>
-                        </div>
-                        <div class="like">
-                            <span class="iconify" data-inline="false" data-icon="mdi:hamburger-check"></span>
-                            <p id="conteur_like">0</p>
-                        </div>
-                    </div>
-                </div>
-            </div>  
+            </div>         -->
+            
         </div>
     </div>
 
@@ -405,14 +230,14 @@
                     <div id="user_mod">
                         <div id="mod_info">
                             <p id="mod_info_lab">username</p>
-                            <p class="my_info" id="Personal_user">User</p>
+                            <p class="my_info" id="Personal_user">{{Info.User}}</p>
                         </div>
                         <button id="user_btn">Modify</button>
                     </div>
                     <div id="mail_mod">
                         <div id="mod_info">
                             <p id="mod_info_lab">Email address</p>
-                            <p class="my_info" id="Personal_email">airtrackingdelordi@gmail.com</p>
+                            <p class="my_info" id="Personal_email">{{Info.Mail}}</p>
                         </div>
                         <button id="mail_btn">Modify</button>
                     </div>
@@ -420,7 +245,7 @@
                         <button id="password_btn">Password Modification</button>
                     </div>
                     <form action="/Home" method="get">
-                        <input type="text" name="DeleteAccount" id="DeleteInput" name=""> <!-- changer le name par ladress email du cookie -->
+                        <input type="hidden" name="DeleteAccount" id="DeleteInput" name="{{Info.mail}}"> <!-- changer le name par ladress email du cookie -->
                         <button id="Delete_account">Delete Account</button>
                     </form>
                 </div>
