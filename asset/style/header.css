@@ -134,13 +134,28 @@
     transform: translateX(-50%);
 }
 #pop_post_add{
-    /* display: none; */
-    display: block;
+    display: none;
+    /* display: block; */
     position:fixed;
     top: 55px;
     width: 100%;
     height: calc(100% - 55px);
     background: rgba(0, 0, 0, 0.9);
+}
+#close_post{
+    z-index: 99;
+    position: absolute;
+    top: 5px;
+    right: 30px;
+    background: none;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    border: none;
+    font-size: 40px;
+    color: #FFCB77;
+    transform: rotate(-45deg);
+    cursor: pointer;
 }
 #post_add_info{
     width: 85%;
@@ -165,14 +180,52 @@
     top: 20px;
     width: calc(100% - 80px);
     height: 15%;
-    background: chartreuse;
+    /* background: chartreuse; */
 }
 #tag{
     position: relative;
     left: 40px;
     width: calc(100% - 80px);
     height: 15%;
-    background: chocolate;
+    /* background: chocolate; */
+    bottom: 10px;
+}
+#tag_post{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#tag__tag{
+    /* background: #FFCB77; */
+    width: 100px;
+    height: 35px;
+    border: 2px solid transparent;
+    display: flex;
+}
+#tag__tag input{
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.tag__name{
+    text-align: center;
+    font-size: 15px;
+    font-weight: 800;
+    background: chartreuse;
+    margin-left: 5px;
+    margin-right: 10px;
+    width: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#reset__tag{
+    background: #FFCB77;
+    border: none;
+    /* padding: 10px 20px; */
+    width: 500px;
+    font-weight: 800;
+    font-size: 20px;
 }
 #describ_content{
     position: relative;
@@ -180,21 +233,53 @@
     left: 40px;
     width: calc(100% - 80px);
     height: 70%;
-    background: cornflowerblue;
+    /* background: cornflowerblue; */
+    margin-top: 50px;
 }
 #name label, #tag label, #describ_content label{
     font-size: 25px;
     color: #fff;
 }
-#name input, #tag_posy, #describ_content textarea{
-    margin-top: 20px;
+#name input, #tag_post, #describ_content textarea{
+    margin-top: 10px;
 }
+#name input{
+    width: 80%;
+    height: 20px;
+    padding: 4px 0px;
+    padding-left: 20px;
+    background: #343434;
+    border: 2px solid #FFCB77;
+    border-radius: 5px;
+    color: #fff;
+}
+
 #describ_content textarea{
     resize: none;
-    width: 96%;
-    height:82%;
-    padding: 2%;
+    width: 80%; 
+    height: 70%;
+    padding-left: 20px;
+    padding-top: 10px;
+    background: #343434;
+    border: 2px solid #FFCB77;
+    border-radius: 15px;
+    color: #fff;
 }
+
+#post_submit{
+    position: absolute;
+    bottom: 25px;
+    right: 40px;
+    padding: 10px 20px;
+    background: #FFCB77;
+    border: 4px solid #FFF;
+    border-radius: 15px;
+    color: #343434;
+    font-size: 25px;
+    font-weight: 700;
+}
+
+
 @media screen and (max-width: 1200px){
     #LOGO{
         left: 20px;
@@ -210,6 +295,12 @@
     } 
     #Pop_up{
         right: 0px;
+    }
+    #describ_content{
+        margin-top: 70px;
+    }
+    #describ_content textarea{
+        height: 50%;
     }
 }
 
@@ -230,8 +321,23 @@
     .search-text{
         width: 0px;
     }
+    #describ_content{
+        margin-top: 110px;
+    }
+    #post_submit{
+        bottom: 15px;
+        right: 20px;
+        padding: 5px 10px;
+    }
 }
-
+@media screen and (max-width: 750px){
+    #describ_content{
+        margin-top: 140px;
+    }
+    #describ_content textarea{
+        height: 40%;
+    }
+}
 @media screen and (max-width: 650px){
     #search-box{
         z-index: 100;
@@ -254,4 +360,7 @@
     #Addpost_Login{
         right: 10px;
     } 
+    #describ_content{
+        margin-top: 190px;
+    }
 }

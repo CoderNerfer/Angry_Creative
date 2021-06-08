@@ -8,13 +8,20 @@ input.addEventListener("keyup", function(event) {
     // Cancel the default action, if needed
     event.preventDefault();
     // Trigger the button element with a click
-    console.log("blab")
+    console.log("recherche depuis le header")
     setTimeout(() => {
       document.getElementById("Search__BTN").removeAttribute("disabled");
       document.getElementById("Search__BTN").click();
     }, 2000);
   }
 });
+
+document.getElementById("close_post").addEventListener("click", ()=>{
+    document.getElementById('pop_post_add').style.display = "none"
+})
+document.getElementById("Post_add").addEventListener("click", ()=>{
+    document.getElementById('pop_post_add').style.display = "block"
+})
 
 document.getElementsByClassName("Login")[0].addEventListener("click", (event)=>{
     document.getElementById("Pop_up").style.display = "block"
