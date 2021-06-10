@@ -1,81 +1,104 @@
 *{
      margin: 0;
  }
+html{
+    min-width: 300px;
+}
  body{
     background: #4d4d4d;
  }
+.slider{
+    position: fixed;
+    top: 80px;
+    left: 30px;
+    width: 230px;
+    background: #343434;
+}
+.arrowLeftTheme{
+    z-index: 999;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.arrowRightTheme{
+    z-index: 999;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0px;
+}
+.slides{
+    width: 230px;
+    height: 800px;
+    /* height: 500px; */
+    /* background: purple; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    overflow: hidden;
+    /* overflow-y: scroll; */
+}
+
+.slide{
+    width: 150px;
+    height: 150px;
+    background: pink;
+    margin: 15px 0px;
+    /* float: left; */
+}
+
 
  #all-screen{
     margin: 0;
     padding: 0;
  }
- #All-Theme-Title{
-    width: 200px;
-    height: 30px;
-    top: 60px;
-    left: 30px;
-    position: absolute;
-    font-size: 30px;
-    border-color: #4d4d4d;
-    color: #FFCB77;
+ #post{
+     margin-left: 10px;
+     position:absolute;
+     left: 15vw;
+     width:80vw;
+     height: 51vw;
+     background: #373737;
  }
+
  #User-Post-Name{
-    width: max(30%,600px);
-    height: 80px;
-    top: 50%;
-    right: -50%;
+    width: 35vw;
+    height: 70px;
+    top: 0%;
+    right: -43%;
     transform: translate(-50%,120%);
     background:grey;
     position: relative;
  }
- .Theme_bar{ 
-    background-color: #373737;
-    border-color: #373737; 
-    border-style: solid;
-    /* display: block; */
-    display: flex;
-    flex-wrap: wrap;
-    overflow: hidden;
-    box-sizing: border-box; 
-    justify-content: space-between;
-    /* width: 200px; */
-
-    width: 200px;
-    white-space: nowrap;
-    height: 600px;
-    margin: 10px;
-    }
-.fleche p{
-    position: relative;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    cursor:pointer;
-}
-.fleche{
-    width: 30px;
-    height: 180px;
-    background: #FFCB77;
-    text-align: center;
+ #tags{
+     position: absolute;
+     width: 200px;
+     height: 30px;
+     top: 10vw;
+     left: 5vw;
+     background: #FFAA;
+ }
+ #tags p{
     font-size: 20px;
-    opacity: 0.9;
-    user-select: none;
-    z-index: 1;
-}
-.fleche:hover{
-    opacity: 1;
-}
-.haut{
-    left: 82px;
-    top: -60px;
-
-    position: relative;
-    transform: rotate(-90deg);
-}
-
-.bas{
-    left: 82px;
-    bottom: 600px;
-    position: relative;
+    color: #FFCB77;
+ }
+ .line{
+    position: absolute;
+    right: 40vw;
+    top: -17vw;
+    height: 70vw;
+    width: 1px;
     transform: rotate(90deg);
-}
+    background: #FFCB77;
+ }
+ #text{
+     margin: 15px;
+     position: absolute;
+     left: 4vw;
+     top: 18vw;
+     height: 30vw;
+     width: 70vw;
+     background: red;
+ }
+
+ 

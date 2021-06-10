@@ -2,19 +2,34 @@ const arrowLeftTheme = document.querySelectorAll(".arrowLeftTheme")[0]
 const arrowRightTheme = document.querySelectorAll(".arrowRightTheme")[0]
 
 arrowLeftTheme.addEventListener("click", () => {
-    const theme = document.getElementById("theme")
+    console.log("Aidr MWOA")
+    const theme = document.getElementById("ici")
     theme.scrollTo({
         left:0,
-        top:theme.scrollLeft-500,
+        top:theme.scrollTop-500,
         behavior:"smooth"
     })
 })
 
 arrowRightTheme.addEventListener("click", () => {
-    const theme = document.getElementById("theme")
+    console.log("j'aime pas quand il ny pas derreur mais que cela ne marche PAS NIQUE !!!!!!!!!!!!!!!!!! tg")
+    const theme = document.getElementById("ici")
     theme.scrollTo({
         left:0,
-        top:theme.scrollLeft+500,
+        top:theme.scrollTop+500,
         behavior:"smooth"
     })
 })
+
+// const top__ = document.getElementById("go_top")
+// const bottom = document.getElementById('go_bottom')
+
+// bottom.addEventListener('click', (e)=>{
+//     const theme = document.getElementById("theme")
+//     theme.scrollTo({
+//         left:0,
+//         top:theme.scrollLeft+500,
+//         behavior:"smooth"
+//     })
+
+// })
