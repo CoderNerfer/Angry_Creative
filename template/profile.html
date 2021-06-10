@@ -8,11 +8,11 @@
 
     <!-- CSS -->
         <!-- page -->
-        <link rel="stylesheet" href="../asset/style/profile.css">
+        <link rel="stylesheet" href="/static/style/profile.css">
         <!-- Header -->
-        <link rel="stylesheet" href="../asset/style/header.css">
+        <link rel="stylesheet" href="/static/style/header.css">
         <!-- Post -->
-        <link rel="stylesheet" href="../asset/style/post.css">
+        <link rel="stylesheet" href="/static/style/post.css">
 
     <!-- Police ROBOTO -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -54,82 +54,82 @@
             </div>
 
         </div>
-
+ 
         <div id="pop_post_add">
             <div id="post_add_info">
                 <button id="close_post">+</button>
-                <form action="javascript:void(0);">
+                <form action="/" method="GET">
                     <div id="name">
                         <label for="post_name_add">Name :</label><br>    
                         <input type="text" name="post_name_add" id="post_name_add">
                     </div>
                     
                     <div id="tag">
-                        <label for="">Tag : 0/4</label>
+                        <label for="" id="nb_tag">Tag : 0/4</label>
                         
                         <div id="tag_post">
-                            <div id="tag__tag">
-                                <input type="radio" name="" id="">
+                            <div id="tag__tag" >
+                                <input type="radio" name="Fast_Food" id="" class="tag__post">
                                 <p class="tag__name Fast_Food_post">Fast Food</p>
                             </div>
-                            <div id="tag__tag">
-                                <input type="radio" name="" id="">
+                            <div id="tag__tag" >
+                                <input type="radio" name="Pizza" id="" class="tag__post">
                                 <p class="tag__name Pizza_post">Pizza</p>
                             </div>
-                            <div id="tag__tag">
-                                <input type="radio" name="" id="">
+                            <div id="tag__tag" >
+                                <input type="radio" name="Burger" id="" class="tag__post">
                                 <p class="tag__name Burger_post">Burger</p>
                             </div>
-                            <div id="tag__tag">
-                                <input type="radio" name="" id="">
+                            <div id="tag__tag" >
+                                <input type="radio" name="Dessert" id="" class="tag__post">
                                 <p class="tag__name Dessert_post">Dessert</p>
                             </div>
-                            <div id="tag__tag">
-                                <input type="radio" name="" id="">
+                            <div id="tag__tag" >
+                                <input type="radio" name="American" id="" class="tag__post">
                                 <p class="tag__name American_post">American</p>
                             </div>
-                            <div id="tag__tag">
-                                <input type="radio" name="" id="">
+                            <div id="tag__tag" >
+                                <input type="radio" name="Italia" id="" class="tag__post">
                                 <p class="tag__name Italia_post">Italia</p>
                             </div>
-                            <div id="tag__tag">
-                                <input type="radio" name="" id="">
+                            <div id="tag__tag" >
+                                <input type="radio" name="Mexican" id="" class="tag__post">
                                 <p class="tag__name Mexican_post">Mexican</p>
                             </div>
-                            <div id="tag__tag">
-                                <input type="radio" name="" id="">
+                            <div id="tag__tag" >
+                                <input type="radio" name="India" id="" class="tag__post">
                                 <p class="tag__name India_post">India</p>
                             </div>
-                            <div id="tag__tag">
-                                <input type="radio" name="" id="">
+                            <div id="tag__tag" >
+                                <input type="radio" name="Japan" id="" class="tag__post">
                                 <p class="tag__name Japan_post">Japan</p>
                             </div>
-                            <div id="tag__tag">
-                                <input type="radio" name="" id="">
+                            <div id="tag__tag" >
+                                <input type="radio" name="French" id="" class="tag__post">
                                 <p class="tag__name French_post">French</p>
                             </div>
-                            <div id="tag__tag">
-                                <input type="radio" name="" id="">
+                            <div id="tag__tag" >
+                                <input type="radio" name="Africa" id="" class="tag__post">
                                 <p class="tag__name Africa_post">Africa</p>
                             </div>
-                            <div id="tag__tag">
-                                <input type="radio" name="" id="">
+                            <div id="tag__tag" >
+                                <input type="radio" name="BBQ" id="" class="tag__post">
                                 <p class="tag__name BBQ_post">BBQ</p>
                             </div>
-                            <div id="tag__tag">
-                                <input type="radio" name="" id="">
+                            <div id="tag__tag" >
+                                <input type="radio" name="Korea" id="" class="tag__post">
                                 <p class="tag__name Korea_post">Korea</p>
                             </div>
-                            <div id="tag__tag">
-                                <input type="radio" name="" id="">
+                            <div id="tag__tag" >
+                                <input type="radio" name="Vegan" id="" class="tag__post">
                                 <p class="tag__name Vegan_post">Vegan</p>
                             </div>
-                            <div id="tag__tag">
-                                <input type="radio" name="" id="">
+                            <div id="tag__tag" >
+                                <input type="radio" name="America_Latina" id="" class="tag__post">
                                 <p class="tag__name Latina_America_post">America Latina</p>
                             </div>
-                            <div id="tag__tag">
-                                <input type="radio" name="" id="">
+                            <div id="tag__tag" >
+                                <input type="radio" name="Bakery" id="" class="tag__post">
                                 <p class="tag__name Bakery_post">Bakery</p>
                             </div>
                             <div id="tag__tag">
@@ -151,7 +151,7 @@
         </div>
 
         <!-- <img src="https://img.icons8.com/fluent-systems-regular/45/000000/user-male-circle.png"/> -->
-        <script src="../asset/js/header.js"></script>
+        <script src="/static/js/header.js"></script>
 
 
     </header>
@@ -161,12 +161,10 @@
         <div id="Profil_Info">
             <div id="stat">
                 <p id="Post_stat">
-                    <!-- Post : <strong>0</strong> -->
-                    {{Info.nb_post}}
+
                 </p>
                 <p id="Liked_stat">
-                    <!-- Liked Post : <strong>0</strong> -->
-                    {{Info.nb_post_liked}}
+
                 </p>
             </div>
             <button id="Edit_profil_btn">
@@ -175,7 +173,7 @@
         </div>
         <div id="Post_Area">
 
-            {{tout la boucle des posts}}
+          
             <!-- <div id="Nom_post" class="poste_preview">
                 <div id="header_info">
                     <p class="title">1234567891234567891234567</p>
@@ -223,21 +221,21 @@
     <div id="Manage_Profile">
         <button id="Close"><p>+</p></button>
         <div id="Profile_Info">
-            <p id="Username">USER</p>
+            <p id="Username">PROFILE</p>
             
             <div id="modify_setting">
                 <div id="modify">
                     <div id="user_mod">
                         <div id="mod_info">
-                            <p id="mod_info_lab">username</p>
-                            <p class="my_info" id="Personal_user">{{Info.User}}</p>
+                            <p id="mod_info_lab">Username</p>
+                            <p class="my_info" id="Personal_user">{{.Username}}</p>
                         </div>
                         <button id="user_btn">Modify</button>
                     </div>
                     <div id="mail_mod">
                         <div id="mod_info">
                             <p id="mod_info_lab">Email address</p>
-                            <p class="my_info" id="Personal_email">{{Info.Mail}}</p>
+                            <p class="my_info" id="Personal_email">{{.Email_Adress}}</p>
                         </div>
                         <button id="mail_btn">Modify</button>
                     </div>
@@ -245,7 +243,7 @@
                         <button id="password_btn">Password Modification</button>
                     </div>
                     <form action="/Home" method="get">
-                        <input type="hidden" name="DeleteAccount" id="DeleteInput" name="{{Info.mail}}"> <!-- changer le name par ladress email du cookie -->
+                        <input type="hidden" name="DeleteAccount" id="DeleteInput"> <!-- changer le name par ladress email du cookie -->
                         <button id="Delete_account">Delete Account</button>
                     </form>
                 </div>
@@ -256,14 +254,15 @@
 
     <div id="Special_modif">
         <div id="modif">
-            <form action="/" method="get">
+            <form action="/profile" method="get">
                 <div id="Info__modif">
                     <p id="Name_Modif_1"></p>
                     <p id="Name_Modif_2"></p>
                 </div>
                 <div id="Modif_Info">
-                    <label for="Input__info" id="Label_Input_modif" name=""></label><br> <!-- changer le name par la modif effectuer-->
+                    <label for="Input__info" id="Label_Input_modif"></label><br> <!-- changer le name par la modif effectuer-->
                     <input type="text" name="Input__info" id="Input__info">
+                    <input type="hidden" name="Info" value="X" id="ToChange">
                 </div>
                 <div id="Current_password">
                     <label for="Input__curt_pwd" id="Label_Input__curt_pwd"></label><br>
@@ -275,6 +274,6 @@
         </div>
     </div>
 
-    <script src="../asset/js/profile.js"></script>
+    <script src="/static/js/profile.js"></script>
 </body>
 </html>

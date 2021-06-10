@@ -30,11 +30,13 @@ document.getElementsByClassName("Login")[0].addEventListener("click", (event)=>{
 document.addEventListener("click", ()=>{
     document.getElementById("Pop_up").style.display = "none"
 })
-document.cookie = "Login ='{'user':'Clem','mail':'mail@cookie.com','nb_posts':'10','nb_likes':'15'}'"
-document.cookie = "Connect = true"
+// document.cookie = "Login ='{'user':'Clem','mail':'mail@cookie.com','nb_posts':'10','nb_likes':'15'}'"
+// document.cookie = "Connect = true"
 
 
 let my_cookie_header = Select_Login_cookie()
+
+    console.log(document.cookie);
 if (my_cookie_header == "true"){
     document.getElementsByClassName("Login")[0].setAttribute("src", "https://img.icons8.com/fluent-systems-regular/45/000000/user-male-circle.png")
     document.getElementById("Post_add").style.display = "flex"
@@ -59,4 +61,28 @@ function Select_Login_cookie (){
         }
     })
     return my_cookie_login
+}
+
+const Post_tag = [...document.getElementsByClassName('tag__post')]
+const restes_tag = document.getElementById('reset__tag')
+const nb_tag = document.getElementById('nb_tag')
+let nb_tag_up = 0;
+
+Post_tag.forEach((elem, index)=>{
+    elem.addEventListener('click', ()=>{
+        Up_tag(index)
+    })
+})
+
+restes_tag.addEventListener('click', ()=>{
+    Post_tag.forEach((elem)=>{
+        elem.value = "down"
+    })
+    nb_tag.innerHTML = `Tag : 0/4`
+})
+
+function Up_tag (index_tag){
+    Post_tag[index_tag].value = "up"
+    nb_tag_up ++
+    nb_tag.innerHTML = `Tag : ${nb_tag_up}/4`
 }
