@@ -80,7 +80,7 @@ body
 
 .arrow
 {
-    height: 180px;
+    height: 176px;
     width: 30px;
     background: #FFCB77;
     text-align: center;
@@ -95,7 +95,7 @@ body
     opacity: 1;
 }
 
-.arrow p
+.arrow i
 {
     position: relative;
     top: 50%;
