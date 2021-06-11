@@ -1,5 +1,5 @@
-const arrowLeftTheme = document.querySelectorAll(".arrowLeftTheme")[0]
-const arrowRightTheme = document.querySelectorAll(".arrowRightTheme")[0]
+const arrowLeftTheme = document.querySelectorAll(".arrowTopTheme")[0]
+const arrowRightTheme = document.querySelectorAll(".arrowBottomTheme")[0]
 
 arrowLeftTheme.addEventListener("click", () => {
     console.log("Aidr MWOA")

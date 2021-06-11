@@ -13,19 +13,33 @@ html{
     left: 30px;
     width: 230px;
     background: #343434;
+    border-radius: 10px 10px 10px 10px;
 }
-.arrowLeftTheme{
+.arrowTopTheme{
     z-index: 999;
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
+    height: 30px;
+    width: 230px;
+    background: #FFCB77;
+    border: 2px solid #FFCB77;
+    border-radius: 10px 10px 0px 0px;
 }
-.arrowRightTheme{
+.arrowTopTheme p{
+    transform: rotate(180deg);
+}
+.arrowBottomTheme{
+    height: 30px;
+    width: 230px;
     z-index: 999;
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
     bottom: 0px;
+    background: #FFCB77;
+    border: 2px solid #FFCB77;
+    border-radius: 0px 0px 10px 10px;
 }
 .slides{
     width: 230px;
@@ -36,6 +50,7 @@ html{
     flex-wrap: wrap;
     justify-content: center;
     overflow: hidden;
+    
     /* overflow-y: scroll; */
 }
 
