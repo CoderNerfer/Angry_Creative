@@ -6,14 +6,15 @@ html{
 }
  body{
     background: #4d4d4d;
+    overflow: hidden;
  }
 .slider{
     position: fixed;
-    top: 80px;
+    top: 150px;
     left: 30px;
     width: 230px;
     background: #343434;
-    border-radius: 10px 10px 10px 10px;
+    border-radius: 5px 5px 5px 5px;
 }
 .arrowTopTheme{
     z-index: 999;
@@ -24,10 +25,7 @@ html{
     width: 230px;
     background: #FFCB77;
     border: 2px solid #FFCB77;
-    border-radius: 10px 10px 0px 0px;
-}
-.arrowTopTheme p{
-    transform: rotate(180deg);
+    border-radius: 5px 5px 0px 0px;
 }
 .arrowBottomTheme{
     height: 30px;
@@ -39,7 +37,7 @@ html{
     bottom: 0px;
     background: #FFCB77;
     border: 2px solid #FFCB77;
-    border-radius: 0px 0px 10px 10px;
+    border-radius: 0px 0px 5px 5px;
 }
 .slides{
     width: 230px;
@@ -67,35 +65,68 @@ html{
     margin: 0;
     padding: 0;
  }
+ #Theme-scrollbar{
+     position: fixed;
+     width: 200px;
+     height: 60px;
+     left: 3%;
+     top: 10%;
+     font-size: 30px;
+     color: #FFCB77;
+ }
  #post{
      margin-left: 10px;
      position:absolute;
-     left: 15vw;
-     width:80vw;
-     height: 51vw;
+     left: 15%;
+     width:80%;
+     height: 100%;
      background: #373737;
  }
 
  #User-Post-Name{
-    width: 35vw;
-    height: 70px;
-    top: 0%;
-    right: -43%;
+    width: 90vh; 
+    height: 5vh;
+    top: 5%;
+    left: 50%;
+    text-align: center;
     transform: translate(-50%,120%);
-    background:grey;
-    position: relative;
+    position: absolute;
+    font-size: 44px;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    text-transform: uppercase;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    color: #FFFFFF;
+
  }
  #tags{
      position: absolute;
-     width: 200px;
-     height: 30px;
-     top: 10vw;
-     left: 5vw;
-     background: #FFAA;
+     width: 30vh;
+     height: 10vh;
+     top: 22%;
+     left: 6%;
+
  }
+
  #tags p{
-    font-size: 20px;
+    font-size: 25px;
     color: #FFCB77;
+ }
+ #alltags{
+    position: relative;
+    top:27%;
+    left: 6%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(1px,0.17fr));
+ }
+ .Tag{
+     width: 200px;
+     height: 40px;
+     justify-content: center;
+     font-size: 30px;
+     display: flex;
+     background: #FFCB77;
  }
  .line{
     position: absolute;
@@ -113,7 +144,11 @@ html{
      top: 18vw;
      height: 30vw;
      width: 70vw;
-     background: red;
- }
+     background:#4d4d4d;
+     color: #FFFFFF;
+    justify-content: center;
+}
 
- 
+ /* Cheddar Sauce - USER */
+
+
