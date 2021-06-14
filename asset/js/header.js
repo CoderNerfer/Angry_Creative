@@ -1,5 +1,5 @@
 // Get the input field
-var input = document.getElementById("Search__Text");
+let input = document.getElementById("Search__Text");
 
 // Execute a function when the user releases a key on the keyboard
 input.addEventListener("keyup", function(event) {
@@ -35,8 +35,6 @@ document.cookie = "Connect = true"
 
 
 let my_cookie_header = Select_Login_cookie()
-
-    console.log(document.cookie);
 if (my_cookie_header == "true"){
     document.getElementsByClassName("Login")[0].setAttribute("src", "https://img.icons8.com/fluent-systems-regular/45/000000/user-male-circle.png")
     document.getElementById("Post_add").style.display = "flex"
@@ -63,47 +61,54 @@ function Select_Login_cookie (){
     return my_cookie_login
 }
 
-// // name input management
-// let nb_character = 0;
-// document.getElementById("post_name_add").addEventListener("input", ()=>{
-//     if (document.getElementById("post_name_add").value.length < 4){
-//         document.getElementById("label_name_post").innerHTML = `Name : | not enough character ${nb_character}/25`
-//     }else if(document.getElementById("post_name_add").value.length > 25){
-//         document.getElementById("label_name_post").innerHTML = `Name : | too many character ${nb_character}/25`
-//     }else{
-//         document.getElementById("label_name_post").innerHTML = `Name : | character ${nb_character}/25`
-//     }
-//     nb_character ++
-//     console.log(nb_character)
-// })
+
+
+
+
+
+let NameAdd = document.getElementById("post_name_add");
+// --name input management--
+NameAdd.addEventListener("input", ()=>{
+    if (NameAdd.value.length < 4){
+        document.getElementById("label_name_post").innerHTML = `Name : not enough character ${NameAdd.value.length}/25`
+    }else if(NameAdd.value.length > 25){
+        document.getElementById("label_name_post").innerHTML = `Name : too many character ${NameAdd.value.length}/25`
+    }else{
+        document.getElementById("label_name_post").innerHTML = `Name : character ${NameAdd.value.length}/25`
+    }
+})
+
+let ContentAdd = document.getElementById("post_content_add");
+ContentAdd.addEventListener("input", ()=>{
+    if (ContentAdd.value.length < 4){
+       document.getElementById("label_content_post").innerHTML = `Name : not enough character ${ContentAdd.value.length}/2000`
+    }else if(ContentAdd.value.length > 2000){
+       document.getElementById("label_content_post").innerHTML = `Name : too many character ${ContentAdd.value.length}/2000`
+    }else{
+       document.getElementById("label_content_post").innerHTML = `Name : character ${ContentAdd.value.length}/2000`
+    }
+})
+
+
+
 
 // Tag management
 const Post_tag = [...document.getElementsByClassName('tag__post')]
 const restes_tag = document.getElementById('reset__tag')
 const nb_tag = document.getElementById('nb_tag')
 let nb_tag_up = 0;
-
-
+let Check_Tag = "";
+Post_tag.forEach((elem)=>{
+    elem.value = "down"
+})
 Post_tag.forEach((elem, index)=>{
     elem.addEventListener('click', ()=>{
-        Up_tag(index)
-    })
-})
-
-restes_tag.addEventListener('click', ()=>{
-    Post_tag.forEach((elem)=>{
-        elem.value = "down"
-        elem.removeAttribute("disabled")
-    })
-    nb_tag.innerHTML = `Tag : 0/4`
-    nb_tag_up = 0
-})
-
-function Up_tag (index_tag){
-    if (Post_tag[index_tag].value == "down" && nb_tag_up <4){
-        Post_tag[index_tag].value = "up"
-        nb_tag_up ++
-        nb_tag.innerHTML = `Tag : ${nb_tag_up}/4`
+        if (elem.value == "down"){
+            Check_Tag+=elem.name
+            nb_tag_up ++
+            nb_tag.innerHTML = `Tag : ${nb_tag_up}/4`
+            elem.value = "up"
+        }
         if (nb_tag_up == 4){
             Post_tag.forEach((elem)=>{
                 if (elem.value == "down"){
@@ -111,6 +116,44 @@ function Up_tag (index_tag){
                 }
             })
         }
-    }
-    
-}
+    })
+})
+restes_tag.addEventListener('click', ()=>{
+    Post_tag.forEach((elem)=>{
+        elem.checked = false;
+        elem.value = "down"
+        elem.removeAttribute("disabled")
+    })
+    nb_tag.innerHTML = `Tag : 0/4`
+    nb_tag_up = 0
+    Check_Tag = ""
+})
+
+
+
+const myForm = document.getElementById("myForm")
+myForm.addEventListener('submit',function (e){
+    document.getElementById("pop_post_add").style.display="none";
+    e.preventDefault()
+    const formData = new FormData(this)
+
+    fetch('/recup', {
+        method: 'post',
+        headers : {
+            'Accept': 'application/json',
+            'Content-Type':'application/json'
+        },
+        body:JSON.stringify({
+            Name: NameAdd.value,
+            Content: ContentAdd.value,
+            Tags: Check_Tag
+        })
+    })
+    .then(function(response){
+        return response.text
+    })
+    .catch(function(error){
+        console.error(error)
+    })
+
+})
