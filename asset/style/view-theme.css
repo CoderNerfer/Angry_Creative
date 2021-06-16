@@ -34,7 +34,6 @@ body
     height: 80vh;
     width:180px;
     overflow: hidden;
-    overflow-y: scroll;
 }
 #test::-webkit-scrollbar
 {
@@ -99,4 +98,26 @@ body
     margin-top: 50px;
     display: grid;
     grid-template-columns: auto auto auto;
+}
+
+@media screen and (max-width: 1665px){
+    .affichage
+    {
+        grid-template-columns: auto auto;
+    }
+}
+
+@media screen and (max-width: 1225px){
+    .affichage
+    {
+        grid-template-columns: auto;
+    }
+    .all_posts
+    {
+        padding-left: 180px;
+    }
+    .page
+    {
+        padding-left: 0;
+    }
 }

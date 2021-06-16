@@ -3,8 +3,8 @@ const arrowBottom = document.querySelectorAll(".arrowBottom")[0]
 
 arrowTop.addEventListener("click", () => {
     const theme = document.getElementById("test")
-    test.scrollTo({
-        top:test.scrollTop-500,
+    theme.scrollTo({
+        top:theme.scrollTop-500,
         left:0,
         behavior:"smooth"
     })
@@ -12,8 +12,8 @@ arrowTop.addEventListener("click", () => {
 
 arrowBottom.addEventListener("click", () => {
     const theme = document.getElementById("test")
-    test.scrollTo({
-        top:test.scrollTop+500,
+    theme.scrollTo({
+        top:theme.scrollTop+500,
         left:0,
         behavior:"smooth"
     })
