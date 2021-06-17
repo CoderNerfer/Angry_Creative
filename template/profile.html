@@ -11,8 +11,10 @@
         <link rel="stylesheet" href="/static/style/profile.css">
         <!-- Header -->
         <link rel="stylesheet" href="/static/style/header.css">
+        <link rel="stylesheet" href="/static/style/tag_post.css">
         <!-- Post -->
         <link rel="stylesheet" href="/static/style/post.css">
+
 
     <!-- Police ROBOTO -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -41,8 +43,7 @@
             </button>
         </div>
         <div id="Post_Area">
-
-            {{range .Display}}
+            {{range .}}
                 <div id="Nom_post" class="poste_preview">
                         <div id="header_info">
                             <p class="title">{{.Post_info.Name}}</p>
