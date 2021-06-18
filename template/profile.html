@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>profil</title>
+
+    <!-- CSS -->
+        <!-- page -->
+        <link rel="stylesheet" href="/static/style/profile.css">
+        <!-- Header -->
+        <link rel="stylesheet" href="/static/style/header.css">
+        <link rel="stylesheet" href="/static/style/tag_post.css">
+        <!-- Post -->
+        <link rel="stylesheet" href="/static/style/post.css">
+
+
+    <!-- Police ROBOTO -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+    <!-- iconify -->
+    <script src="https://code.iconify.design/1/1.0.6/iconify.min.js"></script>
+
+</head>
+<body>
+    
+    {{template "header"}}
+
+    <div id="Overview">
+        <div id="Profil_Info">
+            <div id="stat">
+                <p id="Post_stat">
+                    <!-- recup depuis la BDD  -->
+                </p>
+                <p id="Liked_stat">
+                    <!-- recup depuis la BDD  -->
+                </p>
+            </div>
+            <button id="Edit_profil_btn">
+                Edit Profil
+            </button>
+        </div>
+        <div id="Post_Area">
+            {{range .}}
+                <div id="Nom_post" class="poste_preview">
+                        <div id="header_info">
+                            <p class="title">{{.Post_info.Name}}</p>
+                            <!-- <p class="author">123456789123</p> -->
+                        </div>
+                        <div id="brief_content">
+                        {{.Post_info.Content}}
+                        </div>
+                    <div id="footer_info">
+                        <div class="posttag">
+                            {{range .Tag_info}}
+                                <div class="tag {{.}}_post">
+                                    <p>{{.}}</p>
+                                </div>
+                            {{end}}
+                        </div>
+                        <div class="stat_global">
+                            <div class="view">
+                                <span class="iconify" data-inline="false" data-icon="akar-icons:eye"></span>
+                                <p id="conteur_view">{{.Post_info.Views}}</p>
+                            </div>
+                            <div class="like">
+                                <span class="iconify" data-inline="false" data-icon="mdi:hamburger-check"></span>
+                                <p id="conteur_like">{{.Post_info.Like}}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            {{end}}
+            <!-- recup depuis la BDD  en fornat de tableau de struct-->
+
+            <!-- <div id="Nom_post" class="poste_preview">
+                <div id="header_info">
+                    <p class="title">1234567891234567891234567</p>
+                    <p class="author">123456789123</p>
+                </div>
+                <div id="brief_content">
+                    <p>
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nihil, doloribus tenetur necessitatibus laborum in reprehenderit iusto harum! Asperiores non consequuntur, quibusdam odio dicta est incidunt ducimus velit impedit quam nostrum! -245 max--
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nihil, doloribus tenetur necessitatibus laborum in reprehenderit iusto harum! Asperiores non consequuntur, quibusdam odio dicta est incidunt ducimus velit impedit quam nostrum! -245 max--
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nihil, doloribus tenetur necessitatibus laborum in reprehenderit iusto harum! Asperiores non consequuntur, quibusdam odio dicta est incidunt ducimus velit impedit quam nostrum! -245 max--
+                </p>
+                    
+                </div>
+                <div id="footer_info">
+                    <div class="posttag">
+                        <div class="tag burger">
+                            <p>Burger</p>
+                        </div>
+                        <div class="tag burger">
+                            <p>Burger</p>
+                        </div>
+                        <div class="tag burger">
+                            <p>Burger</p>
+                        </div>
+                        <div class="tag burger">
+                            <p>Burger</p>
+                        </div>
+                    </div>
+                    <div class="stat_global">
+                        <div class="view">
+                            <span class="iconify" data-inline="false" data-icon="akar-icons:eye"></span>
+                            <p id="conteur_view">0</p>
+                        </div>
+                        <div class="like">
+                            <span class="iconify" data-inline="false" data-icon="mdi:hamburger-check"></span>
+                            <p id="conteur_like">0</p>
+                        </div>
+                    </div>
+                </div>
+            </div>         -->
+            
+        </div>
+    </div>
+
+    <div id="Manage_Profile">
+        <button id="Close"><p>+</p></button>
+        <div id="Profile_Info">
+            <p id="Username">PROFILE</p>
+            
+            <div id="modify_setting">
+                <div id="modify">
+                    <div id="user_mod">
+                        <div id="mod_info">
+                            <p id="mod_info_lab">Username</p>
+                            <p class="my_info" id="Personal_user">{{.Username}}</p>
+                        </div>
+                        <button id="user_btn">Modify</button>
+                    </div>
+                    <div id="mail_mod">
+                        <div id="mod_info">
+                            <p id="mod_info_lab">Email address</p>
+                            <p class="my_info" id="Personal_email">{{.Email_Adress}}</p>
+                        </div>
+                        <button id="mail_btn">Modify</button>
+                    </div>
+                    <div id="password_mod">
+                        <button id="password_btn">Password Modification</button>
+                    </div>
+                    <form action="/delete" method="get">
+                        <input type="hidden" name="DeleteAccount" id="DeleteInput"> <!-- changer le name par ladress email du cookie -->
+                        <button id="Delete_account">Delete Account</button>
+                    </form>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+    <div id="Special_modif">
+        <div id="modif">
+            <form action="/profile" method="get">
+                <div id="Info__modif">
+                    <p id="Name_Modif_1"></p>
+                    <p id="Name_Modif_2"></p>
+                </div>
+                <div id="Modif_Info">
+                    <label for="Input__info" id="Label_Input_modif"></label><br> <!-- changer le name par la modif effectuer-->
+                    <input type="text" name="Input__info" id="Input__info" autocomplete="">
+                    <input type="hidden" name="Info" value="X" id="ToChange">
+                </div>
+                <div id="Current_password">
+                    <label for="Input__curt_pwd" id="Label_Input__curt_pwd"></label><br>
+                    <input type="password" name="Input__curt_pwd" id="Input__curt_pwd" autocomplete="">
+                </div>
+                <button type="submit" id="Save">Save</button>
+            </form>
+            <button id="Exit">Exit</button>
+        </div>
+    </div>
+
+    <script src="/static/js/profile.js"></script>
+</body>
+</html>
