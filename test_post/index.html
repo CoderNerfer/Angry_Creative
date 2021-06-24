@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test_form_send_in_js</title>
+</head>
+<body>
+    <h1>Fetch API - Sending Form Data</h1>
+    <form class="form" id="myForm">
+        <label for="ici_user">username</label>
+        <input type="text" name="ici_user" id="ici_user">
+        <label for="inp_password">password</label>
+        <input type="text" name="inp_password" id="inp_password">
+        <button type="submit" style="width: 100px; height: 100px;">GO .....</button>
+    </form>
+
+    <script>
+        
+        const myForm = document.getElementById("myForm")
+        myForm.addEventListener('submit',function (e){
+            // prevent to page reload or naviguate await
+            e.preventDefault()
+
+            fetch('/recup', {
+                method: 'post',
+                headers : {
+                    'Accept': 'application/json',
+                    'Content-Type':'application/json'
+                },
+                body:JSON.stringify({
+                    username: document.getElementById('ici_user').value,
+                    password: document.getElementById('inp_password').value,
+                    tableau: ["Burger","Fast_food","America"],
+                    time: "15:30"
+                })
+            })
+            .then(function(response){
+                return response.text
+            })
+            .then(function(text){
+                console.log(text)
+            })
+            .catch(function(error){
+                console.error(error)
+            })
+
+        })
+    </script>
+</body>
+</html>

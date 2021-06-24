@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/style/post.css">
+    <link rel="stylesheet" href="/static/style/Post-view.css">
+    <link rel="stylesheet" href="/static/style/header.css">
+    <link rel="stylesheet" href="/static/style/theme.css">
+    <link rel="stylesheet" href="/static/style/tag_post.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script src="https://code.iconify.design/1/1.0.6/iconify.min.js"></script>
+    <title>Post-View</title>
+</head>
+<body>
+    
+    {{template "header"}}
+
+    <div id="post">
+            <div id="User-Post-Name">{{.Post_info.Name}}</div>
+            <div id="tags"><p>Tags for this post :</p></div>
+            <div id="lineTop"></div>
+                <div id="TagsAndWidgets">
+                    <div id="alltags">
+                        {{range .Tag_info}}
+                                <div class="Tag {{.}}_post">
+                                    {{.}}
+                                </div>
+                        {{end}}
+                    </div>
+                    <div class="stat_global">
+                        <div class="view">
+                            <span class="iconify" data-inline="false" data-icon="akar-icons:eye"></span>
+                            <p id="conteur_view">{{.Post_info.Views}}</p>
+                        </div>
+                        
+                            <button type="button" id="Like-Button">
+                                <div class="like">
+                                        <span class="iconify" data-inline="false" data-icon="mdi:hamburger-check"></span>
+                                        <p id="conteur_like">{{.Post_info.Like}}</p>
+                                </div>
+                            </button>
+                        
+                        <div class="params">
+                            {{if eq  .Owner true}}
+                            <button id="modify-post">
+                            <span  class="iconify" data-icon="clarity:cog-line" data-inline="false"></span>
+                            </button>
+                            <div id="pop_post_modify">
+        <div id="post_add_info">
+            <button id="close_post" class="closemod">+</button>
+            <form action="/" method="GET" id="myFormMod">
+                <div id="name">
+                    <label for="post_name_mod" id="label_name_mod">Name : character 0/25</label><br>    
+                    <input type="text" name="post_name_mod" id="post_name_mod">
+                </div>
+                
+                
+                <div id="describ_content">
+                    <label for="post_content_mod" id="label_content_mod">Description : character 0/2000 <br></label>
+                    <textarea name="post_content_mod" id="post_content_mod" cols="30" rows="10"></textarea>
+                </div>
+
+                <input type="hidden" value="{{.Post_info.Id}}" id="Post_id_modif">
+
+                <button id="post_submit_mod" disabled></button>
+                
+            </form>
+        </div>
+    </div>
+                            {{end}}
+                        </div>
+                    </div>
+                </div>
+            <div id="lineBot"></div>
+                <div id="text">{{.Post_info.Content}}}</div> 
+    </div>
+</body>
+<script src="/static/js/Post-view.js"></script>
+</html>

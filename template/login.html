@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/static/style/login.css">
+    <link rel="stylesheet" href="/static/style/header.css">
+    <link rel="stylesheet" href="/static/style/tag_post.css">
+    <!-- Police ROBOTO -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+ 
+</head>
+<body>
+    {{template "header"}}
+    <div id="Loginpic">
+        <div id="LoginArea">
+            <form action="/login" method="POST">
+
+                <div id="Mail">
+                    <label for="Insert_a_mail" class="mailAddress_Stylé">Email</label>
+                    <input type="text" name="Insert_a_mail" id="Insert_a_mail" class="mail_insert" placeholder="lafont.pedro@gmail.com">
+                    <p class="Print_error"></p>
+                </div>
+
+                <div id="Password">
+                    <label for="Insert_a_password" class="Password_Stylé">Password</label>
+                    <input type="password" name="Insert_a_password" id="Insert_a_password" class="Password_insert" placeholder="***********" autocomplete="">
+                    <p class="Print_error"></p>
+                </div>
+
+                <div id="Login_Btn">
+                    <button type="submit" class="submit" disabled>LOGIN</button>
+                </div>
+                
+            </form>
+        </div>
+        <script src="/static/js/login.js"></script>
+    </div>
+</body>
+</html>
