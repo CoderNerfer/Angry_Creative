@@ -234,6 +234,8 @@ Password_Verif.addEventListener("input", (event)=>{
 function verif (){
     if (Email.style.borderColor == "green" && Username.style.borderColor == "green" && Password.style.borderColor == "green"  && Password_Verif.style.borderColor == "green"){
         Submit_btn[0].removeAttribute('disabled')
+    }else{
+        Submit_btn[0].setAttribute('disabled', true)
     }
 }
 
