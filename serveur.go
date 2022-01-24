@@ -23,6 +23,7 @@ func main() {
 	http.HandleFunc("/recup", sql.Recup)
 	http.HandleFunc("/like", sql.Likes)
 	http.HandleFunc("/deletepost", sql.DeletePostModif)
+	http.HandleFunc("/likepost", sql.LikePost)
 	style := http.FileServer(http.Dir("asset/style/"))
 	image := http.FileServer(http.Dir("asset/image/"))
 	js := http.FileServer(http.Dir("asset/js/"))

@@ -116,3 +116,25 @@ Tags.forEach(element => {
         element.innerText = "Fast Food"
     }
 });
+
+
+ 
+function X(e){
+
+    fetch('/likepost', {
+        method : "post",
+        headers : {
+            'Accept': 'application/json',
+            'Content-Type':'application/json'
+        },
+        body:JSON.stringify({
+            Id : e
+        })  
+    })
+    .then(function(response){
+        return response.text
+    })
+    .catch(function(error){
+        console.error(error)
+    }) 
+}
